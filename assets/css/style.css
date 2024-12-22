@@ -1,0 +1,238 @@
+/* Подключаем шрифты */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap");
+
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #fdf7e3;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Шапка */
+/* Хедер */
+header {
+  background: linear-gradient(90deg, #8b4513, #5c2d2d);
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень */
+  position: fixed; /* Фиксируем хедер */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Чтобы всегда был поверх */
+}
+
+header .logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8em; /* Небольшое уменьшение шрифта */
+  margin: 0;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.nav-list li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #fdf7e3;
+  font-weight: 500;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+/* Подсветка активной страницы */
+.nav-list a.active,
+.nav-list a:hover {
+  font-size: 1.1em;
+  color: #ffd700;
+  text-shadow: 0 0 5px #ffd700;
+}
+
+/* Основной контент */
+main {
+  padding-top: 120px; /* Учёт фиксированного хедера */
+  padding-bottom: 100px; /* Отступ снизу */
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #8b4513;
+  text-align: center;
+  text-shadow: 1px 1px 3px #ccc;
+}
+
+p {
+  margin-bottom: 15px;
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.bestsellers {
+  text-align: center;
+}
+
+.bestseller-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.book img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border: 2px solid #8b4513;
+  border-radius: 5px;
+  transition: transform 0.3s ease; /* Плавный переход для трансформации */
+}
+
+.book img:hover {
+  transform: scale(1.1); /* Увеличение размера при наведении */
+}
+/*------------------------------------------------------------------*/
+
+/* Стили для секции информации о книгах */
+.book-info {
+  margin: 20px 0; /* Отступы сверху и снизу */
+  padding: 20px; /* Внутренние отступы */
+  background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+  border-radius: 10px; /* Закругленные углы */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+/* Стили для заголовка секции */
+.book-info h2 {
+  text-align: center; /* Центрирование текста */
+  color: #8b4513; /* Цвет заголовка */
+  margin-bottom: 20px; /* Отступ снизу */
+  transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+/* Эффект наведения на заголовок */
+.book-info h2:hover {
+  color: rgb(255, 215, 0); /* Золотистый цвет при наведении */
+}
+
+/* Стили для таблицы */
+table {
+  width: 100%; /* Ширина таблицы 100% */
+  border-collapse: collapse; /* Убираем двойные границы */
+  margin-top: 10px; /* Отступ сверху */
+}
+
+/* Стили для заголовков таблицы */
+th {
+  background-color: rgba(
+    139,
+    69,
+    19,
+    0.1
+  ); /* Полупрозрачный фон для заголовков */
+  color: #8b4513; /* Цвет текста заголовков */
+  padding: 10px; /* Внутренние отступы */
+  text-align: left; /* Выравнивание текста по левому краю */
+}
+
+/* Стили для ячеек таблицы */
+td {
+  padding: 10px; /* Внутренние отступы */
+  border: 1px solid #8b4513; /* Граница ячеек */
+}
+
+/* Стили для строк таблицы при наведении */
+tbody tr:hover {
+  background-color: rgba(
+    139,
+    69,
+    19,
+    0.1
+  ); /* Полупрозрачный фон при наведении */
+}
+
+/* Основной блок с текстом */
+.welcome-text {
+  margin: 50px auto; /* Отступ сверху и снизу */
+  text-align: center;
+  line-height: 1.6;
+  max-width: 800px;
+  color: #5c2d2d;
+  font-size: 1em; /* Уменьшаем шрифт */
+}
+
+.welcome-text h1 {
+  font-size: 2em; /* Уменьшаем размер */
+  margin-top: 40px; /* Добавляем больший отступ сверху */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  color: #8b4513;
+}
+
+.welcome-text p {
+  margin-bottom: 15px;
+  padding: 0 15px;
+}
+
+/* Стили для заголовков жанров */
+.catalog h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2em; /* Увеличиваем размер заголовка */
+  color: #5c2d2d; /* Цвет заголовка */
+  margin: 20px 0; /* Отступы сверху и снизу */
+  text-align: left; /* Выравнивание по левому краю */
+  margin-left: 38px;
+}
+
+/* Стили для списка книг */
+.book-list {
+  padding: 0; /* Убираем отступы */
+  /*list-style-type: circle; /* Убираем маркеры */
+  margin-left: 38px;
+  max-height: 150px; /* Максимальная высота списка */
+  overflow-y: auto; /* Включаем вертикальную прокрутку */
+  overflow-x: hidden; /* Обрезаем переполнение по горизонтали */
+  padding: 10px 10px 10px 22px; /* Отступы внутри списка */
+  border: 1px solid #8b4513; /* Граница для визуального отделения */
+  border-radius: 5px; /* Закругленные углы */
+}
+
+.book-list li {
+  padding: 10px; /* Внутренние отступы */
+  border-bottom: 1px solid #ddd; /* Линия между элементами */
+  transition: background-color 0.3s; /* Плавный переход для фона */
+}
+
+.book-list li:hover {
+  background-color: rgba(73, 139, 19, 0.1); /* Фон при наведении */
+}
+
+/* Стили для списка Классика */
+.catalog h2:nth-of-type(1) + .book-list {
+  list-style-type: circle; /* Круглые маркеры */
+}
+
+/* Стили для списка Фантастика */
+.catalog h2:nth-of-type(2) + .book-list {
+  list-style-type: square; /* Квадратные маркеры */
+}
+
+/* Стили для списка Детективы */
+.catalog h2:nth-of-type(3) + .book-list {
+  list-style-type: disclosure-closed; /* Диск (стандартный маркер) */
+}

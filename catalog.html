@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог книг</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Шапка сайта -->
+    <header>
+      <div class="logo">Книжный Магазин</div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html" class="active">Каталог</a></li>
+          <li><a href="recomendations.html">Рекомендации</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+      <section class="catalog">
+        <h1>Каталог книг</h1>
+
+        <!-- Жанр 1: Классика -->
+        <h2>Классика</h2>
+        <ul class="book-list">
+          <li>1984 — Джордж Оруэлл</li>
+          <li>Мастер и Маргарита — Михаил Булгаков</li>
+          <li>Преступление и наказание — Фёдор Достоевский</li>
+          <li>Анна Каренина — Лев Толстой</li>
+          <li>Гордость и предубеждение — Джейн Остин</li>
+        </ul>
+
+        <!-- Жанр 2: Фантастика -->
+        <h2>Фантастика</h2>
+        <ul class="book-list">
+          <li>Дюна — Фрэнк Герберт</li>
+          <li>Автостопом по галактике — Дуглас Адамс</li>
+          <li>451 градус по Фаренгейту — Рэй Брэдбери</li>
+          <li>Конец Вечности — Айзек Азимов</li>
+          <li>Властелин колец — Джон Р.Р. Толкин</li>
+        </ul>
+
+        <!-- Жанр 3: Детективы -->
+        <h2>Детективы</h2>
+        <ul class="book-list">
+          <li>Убийство в «Восточном экспрессе» — Агата Кристи</li>
+          <li>Шерлок Холмс — Артур Конан Дойл</li>
+          <li>Десять негритят — Агата Кристи</li>
+          <li>Девушка с татуировкой дракона — Стиг Ларссон</li>
+          <li>Тайна дома с часами — Джон Беллэрс</li>
+        </ul>
+
+        <!-- Элемент для графика -->
+        <h1>График количества купленных книг по жанрам</h1>
+        <canvas id="booksChart" width="400" height="200"></canvas>
+      </section>
+    </main>
+
+    <!-- Подключение внешнего JavaScript-файла -->
+    <script src="assets/js/chart.js"></script>
+	
+  </body>
+</html>
